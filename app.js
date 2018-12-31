@@ -15,7 +15,8 @@ app.use(function(req, res, next){
                 //When we use POSTMAN to send PUT request, this too shows PUT. 
                 //Browsers can't sent PUT Request, hence we used method override middlware. Postman can directly send PUT request hence it's logging method type as PUT even before method ovverriding.
 // APP CONFIG
-mongoose.connect("mongodb://localhost/restful_blog_app", {useNewUrlParser: true});
+
+//mongoose.connect("mongodb://localhost/restful_blog_app", {useNewUrlParser: true});
 app.set("view engine", "ejs");
 app.use(express.static("public"));  
 
@@ -38,14 +39,14 @@ app.use(function(req, res, next){
 })              //this is showing PUT because method overriden.
 
 //  MONGOOSE/MODEL CONFIG
-var blogSchema = new mongoose.Schema({
+/*var blogSchema = new mongoose.Schema({
     title: String,
     image: String,
     body: String,
     created: {type: Date, default: Date.now}
 });
-
-var Blog = mongoose.model("Blog", blogSchema);
+*/
+//var Blog = mongoose.model("Blog", blogSchema);
 
 
     /*
