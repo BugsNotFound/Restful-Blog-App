@@ -16,7 +16,10 @@ app.use(function(req, res, next){
                 //Browsers can't sent PUT Request, hence we used method override middlware. Postman can directly send PUT request hence it's logging method type as PUT even before method ovverriding.
 // APP CONFIG
 
-mongoose.connect("mongodb://localhost/restful_blog_app", {useNewUrlParser: true});
+//mongoose.connect("mongodb://localhost/restful_blog_app", {useNewUrlParser: true});
+mongoose.connect("mongodb://himansh:himansh1@ds119258.mlab.com:19258/restful_blog_app", {useNewUrlParser: true});
+
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));  
 
@@ -59,8 +62,8 @@ var Blog = mongoose.model("Blog", blogSchema);
 
 // RESTFUL ROUTES
 app.get("/", function(req, res){
-    res.send("Hello How are you?");
-    //res.redirect("/blogs");
+    //res.send("Hello How are you?");
+    res.redirect("/blogs");
 });
 
 // INDEX ROUTE
