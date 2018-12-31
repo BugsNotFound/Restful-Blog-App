@@ -1,0 +1,42 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">New Blog</div>
+    <form class="ui form" action="/blogs" method="POST" id="newForm">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="blog[title]" placeholder="title" />
+        </div>
+        
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="blog[image]" placeholder="image" />
+        </div>
+        
+        <div class="field">
+            <label>Blog Content</label>
+            <textarea name="blog[body]" placeholder="Blog Content Goes Here..."></textarea>
+        </div>
+        
+        
+        <!-- <input class="ui secondary button" type="submit" value="Submit" /> -->
+        
+        <a onclick="document.getElementById('newForm').submit()">
+            <div class="ui animated fade button black" tabindex="0">
+                <div class="visible content">
+                    Submit  
+                </div>
+        
+                <div class="hidden content">
+                    <i class="save icon small"></i>    
+                </div>
+            </div>
+        </a>                       
+
+        
+        
+        
+    </form>
+</div>
+
+<% include ./partials/footer %>

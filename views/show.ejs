@@ -1,0 +1,63 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header"> <%= blog.title %> </div> 
+    <div class="ui top attached">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%= blog.image %>" />   <br/>
+            <div class="content">
+                <span><%= blog.created.toDateString() %></span>
+            </div>
+            <br/>
+            <div class="description">
+                <p><%- blog.body %></p>
+                <!-- above statement will also render HTML. because we used '-' instead of '=' -->
+            </div>
+            <br />
+            
+            <!--
+            <a class="ui orange basic button" href="/blogs/<%= blog._id %>/edit">Edit</a>
+            
+            <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                <button class="ui red basic button">Delete</button>
+            </form>
+            
+            -->
+            
+            <div class="ui buttons">
+                <a href="/blogs/<%= blog._id %>/edit">
+                    <div class="ui animated fade button orange" tabindex="0">
+                    	<div class="visible content">
+                    		EDIT   
+                    	</div>
+                    
+                    	<div class="hidden content">
+                    		<i class="edit icon small"></i>    
+                    	</div>
+                    </div>
+                </a>
+                
+                <div class="or"></div>
+                
+                <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                    <a onclick="document.getElementById('delete').submit()">
+                        <div class="ui animated fade button red" tabindex="0">
+                        	<div class="visible content">
+                        		DELETE  
+                        	</div>
+                        
+                        	<div class="hidden content">
+                        		<i class="archive icon small"></i>    
+                        	</div>
+                        </div>
+                    </a>                       
+                </form>
+                
+                <!--<button class="ui negative button">DELETE</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<br/><br/>
+<% include ./partials/footer %> 

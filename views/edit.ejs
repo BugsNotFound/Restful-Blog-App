@@ -1,0 +1,40 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">Edit Blog</div>
+    <form class="ui form" action="/blogs/<%= blog._id %>?_method=PUT" id="editForm" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="blog[title]" value="<%= blog.title %>" />
+        </div>
+        
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="blog[image]" value="<%= blog.image %>" />
+        </div>
+        
+        <div class="field">
+            <label>Blog Content</label>
+            <textarea name="blog[body]"><%= blog.body %></textarea>
+        </div>
+        
+        
+        <!-- <input class="ui secondary button" type="submit" value="Submit" /> -->
+        
+        
+        <a onclick="document.getElementById('editForm').submit()">
+            <div class="ui animated fade button black" tabindex="0">
+                <div class="visible content">
+                    Submit  
+                </div>
+        
+                <div class="hidden content">
+                    <i class="save icon small"></i>    
+                </div>
+            </div>
+        </a>        
+        
+    </form>
+</div>
+
+<% include ./partials/footer %>
