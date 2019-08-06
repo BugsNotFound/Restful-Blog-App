@@ -21,6 +21,11 @@ A simple blog app with routing as per Restful conventions.
 
 | DELETE ROUTE | DELETE | `https://restfulblogappdemo.herokuapp.com/blogs/:id`|
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 
 ## Future plans  
 
