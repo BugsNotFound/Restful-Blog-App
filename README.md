@@ -8,11 +8,17 @@ A simple blog app with routing as per Restful conventions.
 | Path | Method | Endpoint |
 | :-- | :-- |
 | INDEX ROUTE | GET | `https://restfulblogappdemo.herokuapp.com/blogs`|
+
 | NEW ROUTE | GET | `https://restfulblogappdemo.herokuapp.com/blogs/new`|
+
 | CREATE ROUTE | POST | `https://restfulblogappdemo.herokuapp.com/blogs`|
+
 | SHOW ROUTE | GET | `https://restfulblogappdemo.herokuapp.com/blogs/:id`|
+
 | EDIT ROUTE | GET | `https://restfulblogappdemo.herokuapp.com/blogs/:id/edit`|
+
 | UPDATE ROUTE | PUT | `https://restfulblogappdemo.herokuapp.com/blogs/:id`|
+
 | DELETE ROUTE | DELETE | `https://restfulblogappdemo.herokuapp.com/blogs/:id`|
 
 
